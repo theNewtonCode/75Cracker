@@ -1,7 +1,33 @@
 {
   "users": {
     "user1": {
+      "1": "solved",
+      "question1": "solved",
+      "question2": "solved",
+      "question3": "solved"
+    },
+    "user2": {
+      "1": "solved",
+      "2": "solved",
       "question1": "solved"
+    },
+    "user3": {
+      "15": "stuck",
+      "21": "stuck",
+      "question3": "solved"
+    },
+    "user4": {
+      "1": "solved",
+      "2": "solved",
+      "12": "solved"
+    },
+    "Abhyuday": {
+      "1": "solved",
+      "2": "stuck"
+    },
+    "Vanshagra": {
+      "14": "solved",
+      "18": "solved"
     }
   }
 }
