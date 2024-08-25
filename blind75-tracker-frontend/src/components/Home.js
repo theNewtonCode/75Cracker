@@ -210,7 +210,7 @@ export default function Home() {
   const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/progress/users').then((response) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/users`).then((response) => {
       setUsers(response.data.users);
     });
   }, []);

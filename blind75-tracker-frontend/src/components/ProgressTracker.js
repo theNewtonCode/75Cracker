@@ -60,11 +60,11 @@ const ProgressTracker = () => {
   const [selectedUser, setSelectedUser] = useState(localStorage.getItem('selectedUser') || '');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/progress/questions').then((response) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/questions`).then((response) => {
       setQuestions(response.data.questions);
     });
 
-    axios.get('http://localhost:5000/api/progress/users').then((response) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/users`).then((response) => {
       setUsers(response.data.users);
     });
 
@@ -74,7 +74,7 @@ const ProgressTracker = () => {
   }, [selectedUser]);
 
   const fetchData = () => {
-    axios.get('http://localhost:5000/api/progress').then((response) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}`).then((response) => {
       setData(response.data.users);
     });
   };

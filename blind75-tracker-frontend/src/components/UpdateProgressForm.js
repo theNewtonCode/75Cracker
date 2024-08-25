@@ -98,7 +98,7 @@ const UpdateProgressForm = ({ username, questions, progress, onProgressUpdate })
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:5000/api/progress/update', { username, questionId, status })
+      .post(`${process.env.REACT_APP_BACKEND_URL}/update`, { username, questionId, status })
       .then((response) => {
         onProgressUpdate(response.data.data);
         setQuestionId('');
