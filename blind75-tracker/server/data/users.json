@@ -1,4 +1,11 @@
 {
-    "users": ["Abhyuday", "Vanshagra", "Vaibhav", "Saini"]
-  }
-  
+  "users": [
+    "Abhyuday",
+    "Vanshagra",
+    "Vaibhav",
+    "Saini",
+    "newUser",
+    "newUser2",
+    "Ghuraiya"
+  ]
+}

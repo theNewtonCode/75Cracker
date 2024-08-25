@@ -23,11 +23,18 @@
     },
     "Abhyuday": {
       "1": "solved",
-      "2": "stuck"
+      "2": "stuck",
+      "3": "solved"
     },
     "Vanshagra": {
+      "1": "solved",
+      "5": "solved",
       "14": "solved",
       "18": "solved"
+    },
+    "Vaibhav": {
+      "1": "solved",
+      "3": "solved"
     }
   }
 }

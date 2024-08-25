@@ -5,34 +5,51 @@ import UserProgress from './UserProgress';
 import UpdateProgressForm from './UpdateProgressForm';
 import ProgressChart from './ProgressChart';
 import { useTheme } from '../ThemeContext';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: 'Arial', sans-serif;
-  background-color: ${({ isDarkMode }) => isDarkMode ? '#1a1a1a' : '#f5f5f5'};
-  color: ${({ isDarkMode }) => isDarkMode ? '#91ff00' : '#333'};
+  font-family: 'Orbitron', sans-serif;
+  background-color: ${({ isDarkMode }) => isDarkMode ? '#0a0a1f' : '#0f4c75'};
+  color: ${({ isDarkMode }) => isDarkMode ? '#00fff5' : '#e0e0e0'};
   min-height: 100vh;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
 `;
 
 const Title = styled.h1`
   text-align: center;
-  color: ${({ isDarkMode }) => isDarkMode ? '#f5f5f5' : '#91ff00'};
-  margin-bottom: 2rem;
+  color: #00fff5;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
 `;
 
 const Section = styled.section`
-  background-color: ${({ isDarkMode }) => isDarkMode ? '#2c2c2c' : '#fff'};
+  background-color: ${({ isDarkMode }) => isDarkMode ? '#1a1a2e' : '#16213e'};
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, ${({ isDarkMode }) => isDarkMode ? '0.3' : '0.1'});
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
   padding: 2rem;
   margin-bottom: 2rem;
+  border: 1px solid #00fff5;
 `;
 
 const SectionTitle = styled.h2`
-  color: ${({ isDarkMode }) => isDarkMode ? '#f5f5f5' : '#444'};
+  color: #00fff5;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`;
+
+const Branding = styled.p`
+  color: #00fff5;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 `;
 
 const ProgressTracker = () => {
@@ -68,7 +85,16 @@ const ProgressTracker = () => {
 
   return (
     <Container isDarkMode={isDarkMode}>
-      <Title isDarkMode={isDarkMode}>Blind 75 Tracker</Title>
+      <Title isDarkMode={isDarkMode}>Prep Challenge Tracker</Title>
+      <Branding>
+      Engineered by{' '}
+      <Link 
+        to="https://github.com/theNewtonCode" 
+        style={{ color: '#ff0080', textDecoration: 'none' }}
+      >
+        theNewtonCode | Abhyuday
+      </Link>
+    </Branding>
       
       {selectedUser && (
         <Section isDarkMode={isDarkMode}>
@@ -88,7 +114,7 @@ const ProgressTracker = () => {
       )}
       
       <Section isDarkMode={isDarkMode}>
-        <SectionTitle isDarkMode={isDarkMode}>Overall Progress</SectionTitle>
+        <SectionTitle isDarkMode={isDarkMode}>Global Hacker Matrix</SectionTitle>
         <ProgressChart
           users={users.map(user => ({
             username: user,
