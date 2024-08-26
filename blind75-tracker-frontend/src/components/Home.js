@@ -229,7 +229,7 @@ export default function Home() {
         {isDarkMode ? '🌞 Light Grid' : '🌙 Dark Grid'}
       </ThemeToggle>
       <Content>
-        <Title data-text="Cyber Challenge Tracker">Cyber Challenge Tracker</Title>
+        <Title data-text="Cyber Challenge Tracker">Blind Coding Tracker</Title>
         <Select isDarkMode={isDarkMode} value={selectedUser} onChange={handleUserChange}>
           <Option value="">Select Hacker</Option>
           {users.map((user) => (
