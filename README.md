@@ -20,11 +20,11 @@
 ## Screenshots
 
 ### Progress Tracker
-![Progress Tracker](path/to/progress_tracker_screenshot.png)
+![Progress Tracker](project_ss/cp.png)
 *Caption: The main progress tracking page showing individual and overall progress.*
 
 ### Update Progress Form
-![Update Progress Form](path/to/update_progress_form_screenshot.png)
+![Update Progress Form](project_ss/uf.png)
 *Caption: The form where users can update their progress on specific questions.*
 
 ## Installation
